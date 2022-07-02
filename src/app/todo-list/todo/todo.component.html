@@ -1,3 +1,5 @@
 <p>
-  {{ task.title }} <span>{{ task.id }}</span>
+  {{ task?.title }}
 </p>
+<p>{{ task?.isDone ? "Finished" : "Not finished" }}</p>
+<button (click)="toggleTodo(task.id, task.isDone)">Toggle todo</button>
